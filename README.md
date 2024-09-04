@@ -15,4 +15,5 @@ Google's SimpleMinCostFlow C++ implementation
 A. Gonoskov, Agnostic conservative down-sampling for optimizing statistical representations and PIC simulations, Computer Physics Communications 271 (2022) 108200. https://doi.org/10.1016/j.cpc.2021.108200.
 
 **Citations**
+
 If you use this software in your research, please use the following citation:
