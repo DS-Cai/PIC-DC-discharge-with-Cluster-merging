@@ -1,6 +1,6 @@
 # PIC_DC_discharge
 This is a 1D PIC code for DC discharge between parallel plates.
-If merging is required, set "size_min" (greater than `constraint_num`) in the parameter_define, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from: If merging is required, set `size_min` (greater than `constraint_num`) in the parameter definitions, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from: If merging is required, set `size_min` (greater than `constraint_num`) in the parameter definitions, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from: https://joshlk.github.io/k-means-constrained.
+If merging is required, set "size_min" (greater than `constraint_num`) in the parameter_define, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from:  https://joshlk.github.io/k-means-constrained.
 If merging is not required, remove the following two lines of code from do_one_cycle: [x_e,vx_e,vy_e,vz_e,WEIGHT_e]=merging(xN_e,xG_e,x_e,vx_e,vy_e,vz_e,WEIGHT_e,N_G,constraint_num,size_min) & [x_i,vx_i,vy_i,vz_i,WEIGHT_i]=merging(xN_i,xG_i,x_i,vx_i,vy_i,vz_i,WEIGHT_i,N_G,constraint_num,size_min)
 Ref:
 https://github.com/joshlk/k-means-constrained
