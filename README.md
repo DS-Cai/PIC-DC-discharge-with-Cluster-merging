@@ -7,8 +7,12 @@ If merging is not required, remove the following two lines of code from do_one_c
 RUn PIC_1D.
 Ref:
 https://github.com/joshlk/k-means-constrained
+
 Bradley, P. S., K. P. Bennett, and Ayhan Demiriz. "Constrained k-means clustering." Microsoft Research, Redmond (2000): 1-8.
+
 Google's SimpleMinCostFlow C++ implementation
+
 A. Gonoskov, Agnostic conservative down-sampling for optimizing statistical representations and PIC simulations, Computer Physics Communications 271 (2022) 108200. https://doi.org/10.1016/j.cpc.2021.108200.
+
 **Citations**
 If you use this software in your research, please use the following citation:
