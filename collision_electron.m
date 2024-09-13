@@ -1,10 +1,5 @@
-% function [N_e,N_i,x_e,vx_e,vy_e,vz_e,x_i,vx_i,vy_i,vz_i]=collision_electron(xe,...
-%      vxe,vye,vze,energy_index,N_e,N_i,x_e,vx_e,vy_e,vz_e,x_i,vx_i,vy_i,vz_i,E_MASS,AR_MASS,E_EXC_TH,EV_TO_J,E_ION_TH,sigma_e,RMB)
-%  [N_e,N_i,x_e,vx_e,vy_e,vz_e,x_i,vx_i,vy_i,vz_i]= collision_electron(x_e(k+1), vx_e(k+1),...
-%             vy_e(k+1), vz_e(k+1),energy_index,N_e,N_i,x_e,vx_e,vy_e,vz_e,x_i,vx_i,vy_i,vz_i,E_MASS,AR_MASS,E_EXC_TH,EV_TO_J,E_ION_TH,sigma_e,RMB);
-%         N_e_coll = N_e_coll + 1;
 xe=x_e(k+1); vxe=vx_e(k+1); vye=vy_e(k+1); vze=vz_e(k+1); 
-%% 变量定义
+%% Variable define
 F1 = E_MASS / (E_MASS + AR_MASS); F2 = AR_MASS / (E_MASS + AR_MASS);
 t0 = 0; t1 = 0; t2 = 0; rnd = 0; g = 0; g2 = 0; gx = 0; gy = 0; gz = 0;
 wx = 0; wy = 0; wz = 0; theta = 0; phi = 0; chi = 0; eta = 0; chi2 = 0;
