@@ -1,4 +1,4 @@
-%% 初始化
+%% Initialization
 N_e = N_INIT;
 N_i =  N_INIT;
 WEIGHT_e = 1e5.*ones(1, N_e);                  % weight of superparticles
