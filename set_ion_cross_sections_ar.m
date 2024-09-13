@@ -1,5 +1,5 @@
 function sigma=set_ion_cross_sections_ar(CS_RANGES,DE_CS)
-    disp("eduPIC: Setting Ar+ / Ar cross sections");
+    disp("Setting Ar+ / Ar cross sections");
 
     qiso = @(e_lab) 2e-19 * e_lab.^(-0.5) ./ (1.0 + e_lab) + ...
         3e-19 * e_lab ./ (1.0 + e_lab / 3.0).^2.0;
