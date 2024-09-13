@@ -1,5 +1,5 @@
 function sigma=set_electron_cross_sections_ar(CS_RANGES,DE_CS,E_EXC_TH,E_ION_TH)
-    disp("eduPIC: Setting e- / Ar cross sections");
+    disp("Setting e- / Ar cross sections");
     e = zeros(1, CS_RANGES);
     sigma = zeros(3, numel(e));
 for i=1: numel(e)
