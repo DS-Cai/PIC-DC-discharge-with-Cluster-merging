@@ -1,7 +1,7 @@
-% 打开文件
+% Open file
 f = fopen('OUTPUT/info.txt', 'w');
 line_= repmat('-', 1, 80);
-% 设置输出格式
+% Set output format
 formatSpec = '%.4e';
 WEIGHT=1e5;
 density = cumul_e_density(N_G / 2+1) / floor(no_of_cycles) /floor(N_T);  % e density @ center
@@ -13,7 +13,7 @@ sim_time = no_of_cycles / FREQUENCY;  % simulated time
 ecoll_freq = N_e_coll / sim_time / N_e;  % e collision frequency
 icoll_freq = N_i_coll / sim_time / N_i;  % ion collision frequency
 
-% 输出到文件
+% Output to a file
 fprintf(f, '########################## eduPIC simulation report ############################\n');
 fprintf(f, 'Simulation parameters:\n');
 fprintf(f, 'Gap distance                          = %f [m]\n', L);
