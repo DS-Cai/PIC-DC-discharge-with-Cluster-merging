@@ -14,4 +14,4 @@ fwrite(f, vy_i, 'double');
 fwrite(f, vz_i, 'double');
 fclose(f);
 
-disp(['>> eduPIC: data saved : ', num2str(N_e), ' electrons ', num2str(N_i), ' ions, ', ' time is ', num2str(Time, '%.2e'), ' [s]']);
+disp(['>>Data saved : ', num2str(N_e), ' electrons ', num2str(N_i), ' ions, ', ' time is ', num2str(Time, '%.2e'), ' [s]']);
