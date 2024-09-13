@@ -1,4 +1,5 @@
-function [x,vx,vy,vz,WEIGHT]=merging(x_N,x_G,x,vx,vy,vz,WEIGHT,N_G,constraint_num,size_min)
+function [x,vx,vy,vz,WEIGHT]=merging(x_N,x_G,x,vx,vy,vz,WEIGHT,DX,N_G,constraint_num)
+size_min=1*constraint_num+1;
 size_max=2*size_min-1;
 non_wtot=[];
 for i=1:N_G-1
