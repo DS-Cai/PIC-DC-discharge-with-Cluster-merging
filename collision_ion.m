@@ -1,5 +1,3 @@
-% function [vx_1, vy_1, vz_1] = collision_ion(vx_1, vy_1, vz_1, vx_2, vy_2, vz_2, energy_index,sigma_i)
-%  [vx_i(k+1), vy_i(k+1), vz_i(k+1)] = collision_ion(vx_i(k+1), vy_i(k+1), vz_i(k+1),vx_a, vy_a, vz_a, energy_index,sigma_i);
 vx_1=vx_i(k+1); vy_1=vy_i(k+1); vz_1=vz_i(k+1); vx_2=vx_a; vy_2=vy_a; vz_2=vz_a; 
 %% calculate relative velocity before collision
 %% random Maxwellian target atom already selected (vx_2,vy_2,vz_2 velocity components of target atom come with the call)
