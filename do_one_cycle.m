@@ -1,4 +1,4 @@
-%% 初始化变量
+%% Initialize variables
 DV = ELECTRODE_AREA * DX;
 FACTOR_E = DT_E / E_MASS * E_CHARGE;
 FACTOR_I = DT_I / AR_MASS * E_CHARGE;
@@ -220,7 +220,9 @@ for k = 0:N_e-1
     xN_e(p+1)=xN_e(p+1)+1;
     xG_e(p+1,xN_e(p+1))=k+1;
 end
-[x_e,vx_e,vy_e,vz_e,WEIGHT_e]=merging(xN_e,xG_e,x_e,vx_e,vy_e,vz_e,WEIGHT_e,N_G,constraint_num,size_min);  % If merging
+if merge
+[x_e,vx_e,vy_e,vz_e,WEIGHT_e]=merging(xN_e,xG_e,x_e,vx_e,vy_e,vz_e,WEIGHT_e,DX,N_G,8);
+end
 N_e=length(WEIGHT_e);
 xG_i=zeros(N_G,1);
 xN_i=zeros(1, N_G);
@@ -230,7 +232,9 @@ if mod(t, N_SUB) == 0
         xN_i(p+1)=xN_i(p+1)+1;
         xG_i(p+1,xN_i(p+1))=k+1;
     end
-    [x_i,vx_i,vy_i,vz_i,WEIGHT_i]=merging(xN_i,xG_i,x_i,vx_i,vy_i,vz_i,WEIGHT_i,N_G,constraint_num,size_min);  % If merging
+    if merge
+    [x_i,vx_i,vy_i,vz_i,WEIGHT_i]=merging(xN_i,xG_i,x_i,vx_i,vy_i,vz_i,WEIGHT_i,DX,N_G,8);
+    end
     N_i=length(WEIGHT_i);
 end
 if mod(t, 100) == 0
