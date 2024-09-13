@@ -98,7 +98,7 @@ cycles_done=0; no_of_cycles=0; % current cycle and total cycles in the run, cycl
 arg1=0;  % used for reading command line arguments
 measurement_mode=0; % flag that controls measurements and data saving
  %%
- % 创建正态分布对象
- rng('default');  % 设置随机数种子为默认值
+ % Create normally distributed objects
+ rng('default');  % Set the random number seed as the default value
  MTgen = rng('shuffle', 'twister');
  RMB = makedist('Normal', 0, sqrt(K_BOLTZMANN * TEMPERATURE / AR_MASS));
