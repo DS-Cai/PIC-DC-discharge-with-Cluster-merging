@@ -1,6 +1,3 @@
-%% Merging parameters
-constraint_num=8;
-size_min=1*constraint_num+1; % Merging rate`50%
 %% constants
 PI = 3.141592653589793;      % mathematical constant Pi
 TWO_PI = 2.0 * PI;               % two times Pi
@@ -101,7 +98,7 @@ cycles_done=0; no_of_cycles=0; % current cycle and total cycles in the run, cycl
 arg1=0;  % used for reading command line arguments
 measurement_mode=0; % flag that controls measurements and data saving
  %%
- % Create normally distributed objects
- rng('default');  % Set the random number seed
+ % 创建正态分布对象
+ rng('default');  % 设置随机数种子为默认值
  MTgen = rng('shuffle', 'twister');
  RMB = makedist('Normal', 0, sqrt(K_BOLTZMANN * TEMPERATURE / AR_MASS));
