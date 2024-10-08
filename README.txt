@@ -1,7 +1,6 @@
 # PIC_DC_discharge
 
-This is the code used in the paper "A Conservative-Constrained Clustering-Merging Algorithm for Particle-in-Cell Codes" that is about to be submitted to Computer Physics Communications.
-
+This is the code used in the paper "A Conservative-Constrained Clustering-Merging Algorithm for Particle-in-Cell Codes" 
 This is a 1D3V PIC code for DC discharge between parallel plates.
 
 If merging is required, set "size_min" (greater than 'constraint_num') in the parameter_define, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from:  https://joshlk.github.io/k-means-constrained. For calling Python code from MATLAB, please refer to：https://ww2.mathworks.cn/help/matlab/matlab_external/ways-to-call-python-from-matlab.html#mw_53c718f8-1bbb-49bd-a17a-344979a5878a
