@@ -18,4 +18,3 @@ A. Gonoskov, Agnostic conservative down-sampling for optimizing statistical repr
 
 **Citations**
 
-If you use this software in your research, please use the following citation:
