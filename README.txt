@@ -7,11 +7,9 @@ Follow the tutorial to install the k-means-constrained Python package: MATLAB Do
 Then, modify the location where the Python package is called in the merging function, specifically in line 20: “py.k_means_constrained.KMeansConstrained”.
 <1> Case 1
 Case 1 uses two groups of particles that follow a Maxwell distribution but have opposite velocities to test the effect of the particle merging algorithm on the particle distribution function (PDF). Both position and velocity spaces are 1D. The merging process is executed cell by cell. “test_minsize” represents the minimum cluster limits for Merge1-4, corresponding to the symbol "m" in the paper. 
-Running Case1.m will get four comparison results for Merge1-4, using the same velocity distribution data before merging, as shown in the Fig.1.
- 
-Fig. 1. Case 1 merging results comparison.
+Running Case1.m will get four comparison results for Merge1-4, using the same velocity distribution data before merging, as shown in the Figure of "Case 1 merging results comparison".
 <2> Case 2
-Case 2 evaluates the quality of the PDF obtained from the merging algorithm using the two-stream instability model. Similarly, "test_minsize" represents the minimum cluster limits for Merge1-3. Running Case3.m will yield the particle distributions and energy change comparisons for four different merging types at various time points. Fig. 2 is an example of the results without merging.
+Case 2 evaluates the quality of the PDF obtained from the merging algorithm using the two-stream instability model. Similarly, "test_minsize" represents the minimum cluster limits for Merge1-3. Running Case3.m will yield the particle distributions and energy change comparisons for four different merging types at various time points. Figure of "Case2-Without merge" is an example of the results without merging.
 <3> Case 3
 Case 3 is a 1D3V simulation of direct current discharge between two parallel plate electrodes, considering electron neutrality, ion neutrality, and Coulomb collisions during the ionization process. The value of the variable “merge” is used to enable (1) or disable (0) merging, while “test_minsize” is used to set the minimum number of particles for merging, corresponding to the variable “m” in the paper. Due to the large number of results generated in this case, only the storage description of the main results is provided here.
  
