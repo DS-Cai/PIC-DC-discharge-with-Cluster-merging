@@ -12,9 +12,6 @@ Running Case1.m will get four comparison results for Merge1-4, using the same ve
 Case 2 evaluates the quality of the PDF obtained from the merging algorithm using the two-stream instability model. Similarly, "test_minsize" represents the minimum cluster limits for Merge1-3. Running Case3.m will yield the particle distributions and energy change comparisons for four different merging types at various time points. Figure of "Case2-Without merge" is an example of the results without merging.
 <3> Case 3
 Case 3 is a 1D3V simulation of direct current discharge between two parallel plate electrodes, considering electron neutrality, ion neutrality, and Coulomb collisions during the ionization process. The value of the variable “merge” is used to enable (1) or disable (0) merging, while “test_minsize” is used to set the minimum number of particles for merging, corresponding to the variable “m” in the paper. Due to the large number of results generated in this case, only the storage description of the main results is provided here.
- 
-Fig. 2. PDF for particles without merge. Particles with positive initial velocity are marked in red, whereas those with negative initial velocity are marked in blue. L is the length of the calculation domain and vmax is the maximum initial velocity. 
-Variables:
 CPU_t: current time step and total CPU time.
 “variable”_i represents ion, “variable”_e represents electron.
 x: current particle position of ions. 
