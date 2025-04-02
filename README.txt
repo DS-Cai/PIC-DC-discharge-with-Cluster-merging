@@ -1,37 +1,12 @@
 # PIC_DC_discharge
 
 This is the code used in the paper "A Conservative-Constrained Clustering-Merging Algorithm for Particle-in-Cell Codes" 
-Note:
-Since the merging function calls a Python package, a Python runtime environment is required when using merging (If merging is not used, then this step is not necessary).
-Follow the tutorial to install the k-means-constrained Python package: MATLAB Documentation. 
-Then, modify the location where the Python package is called in the merging function, specifically in line 20: "py.k_means_constrained.KMeansConstrained".
+This is a 1D3V PIC code for DC discharge between parallel plates.
 
-<1> Case 1
-Case 1 uses two groups of particles that follow a Maxwell distribution but have opposite velocities to test the effect of the particle merging algorithm on the particle distribution function (PDF). Both position and velocity spaces are 1D. The merging process is executed cell by cell. “test_minsize” represents the minimum cluster limits for Merge1-4, corresponding to the symbol "m" in the paper. 
-Running Case1.m will get four comparison results for Merge1-4, using the same velocity distribution data before merging, as shown in the Figure of Case 1 merging results comparison.
- 
-<2> Case 2
-Case 2 evaluates the quality of the PDF obtained from the merging algorithm using the two-stream instability model. Similarly, "test_minsize" represents the minimum cluster limits for Merge1-3. Running Case3.m will yield the particle distributions and energy change comparisons for four different merging types at various time points. The figure of "PDF for particles without merge" is an example of the results without merging.
-<3> Case 3
-Case 3 is a 1D3V simulation of direct current discharge between two parallel plate electrodes, considering electron neutrality, ion neutrality, and Coulomb collisions during the ionization process. The value of the variable “merge” is used to enable (1) or disable (0) merging, while “test_minsize” is used to set the minimum number of particles for merging, corresponding to the variable “m” in the paper. Due to the large number of results generated in this case, only the storage description of the main results is provided here.
+If merging is required, set "size_min" (greater than 'constraint_num') in the parameter_define, and ensure that a callable Python version of MATLAB is installed on your computer. Then, download and install the Constraint_k_means Python code from:  https://joshlk.github.io/k-means-constrained. For calling Python code from MATLAB, please refer to：https://ww2.mathworks.cn/help/matlab/matlab_external/ways-to-call-python-from-matlab.html#mw_53c718f8-1bbb-49bd-a17a-344979a5878a
 
-Variables:
-CPU_t: current time step and total CPU time.
-“variable”_i represents ion, “variable”_e represents electron.
-x: current particle position of ions. 
-vx: current particle velocity along x-direction. 
-vy: current particle velocity along y-direction.
-vz: current particle velocity along z-direction.
-weight: current macro particle weight.
-pot_xt: variation of electric potential with time and coordinates.
-ne_xt: variation of electron density with time and coordinates.
-ni_xt: variation of ion density with time and coordinates.
-meanei_xt: variation of electron mean energy with time and coordinates.
-meanei_xt: variation of electron mean energy with time and coordinates.
-Files:
-conv.dat: storage time, Current macroscopic electron and ion number.
-Picdata.dat: storage current result, including current time, electron and ion number, weight, position and velocity.
-
+If merging is not required, remove the following two lines of code from “do_one_cycle.m": [x_e,vx_e,vy_e,vz_e,WEIGHT_e]=merging(xN_e,xG_e,x_e,vx_e,vy_e,vz_e,WEIGHT_e,N_G,constraint_num,size_min) & [x_i,vx_i,vy_i,vz_i,WEIGHT_i]=merging(xN_i,xG_i,x_i,vx_i,vy_i,vz_i,WEIGHT_i,N_G,constraint_num,size_min)
+RUn PIC_1D.
 Ref:
 https://github.com/joshlk/k-means-constrained
 
